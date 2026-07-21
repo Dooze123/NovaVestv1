@@ -1,0 +1,50 @@
+{
+  "name": "novavest-platform",
+  "version": "1.0.0",
+  "description": "Complete Telegram Bot & Mini App Investment Platform",
+  "main": "server/src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm run dev",
+    "build": "npm run server:build && npm run client:build",
+    "server:build": "cd server && npm run build || true",
+    "client:build": "cd client && npm run build",
+    "start": "node server/src/server.js",
+    "db:init": "cd server && node scripts/initDb.js",
+    "db:migrate": "cd server && node scripts/migrate.js",
+    "db:seed": "cd server && node scripts/seed.js",
+    "test": "cd server && npm test",
+    "test:coverage": "cd server && npm run test:coverage",
+    "lint": "concurrently \"npm run server:lint\" \"npm run client:lint\"",
+    "server:lint": "cd server && npm run lint",
+    "client:lint": "cd client && npm run lint",
+    "format": "concurrently \"npm run server:format\" \"npm run client:format\"",
+    "server:format": "cd server && npm run format",
+    "client:format": "cd client && npm run format",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "mini-app",
+    "investment",
+    "platform",
+    "react",
+    "express",
+    "nodejs"
+  ],
+  "author": "Dooze123",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

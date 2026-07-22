@@ -22,3 +22,9 @@ local_modules
 logs/
 *.pem
 .pnpm-debug.log*
+server/.env
+client/.env.local
+.vercel
+.env.production
+dev.db
+*.sql

@@ -112,7 +112,7 @@ export const seedDatabase = async () => {
  */
 export const migrateDatabase = async () => {
   try {
-    logger.info('📊 Running database migrations...');
+    logger.info('📋 Running database migrations...');
     // Add migration logic here as needed
     logger.info('✅ Migrations completed successfully');
     return true;

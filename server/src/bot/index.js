@@ -202,10 +202,19 @@ bot.action('menu_support', async (ctx) => {
   try {
     await ctx.answerCbQuery();
     await ctx.reply(
-      '🆘 **Support**\n\n📧 Email: support@novavest.com\n💬 Live Chat: Open Mini App\n📞 Telegram: @NovaVestSupport',
+      `
+🆘 **Support**
+
+📧 Email: support@novavest.com
+💬 Telegram: @NovaVestSupport
+🌐 Website: https://novavest.com
+
+Our team is available 24/7 to help you!
+      `,
       {
         reply_markup: {
           inline_keyboard: [
+            [{ text: 'Contact Support', url: 'https://t.me/NovaVestSupport' }],
             [{ text: '← Back', callback_data: 'menu_home' }]
           ]
         }
